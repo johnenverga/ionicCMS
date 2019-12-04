@@ -8,13 +8,14 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    path: 'articles',
+    loadChildren: () => import('./articles/articles.module').then( m => m.ArticlesPageModule)
   },
   {
-    path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+    path: 'article/:articleId',
+    loadChildren: () => import('./article/article.module').then( m => m.ArticlePageModule)
+  },
+
 ];
 
 @NgModule({
