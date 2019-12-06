@@ -34,7 +34,7 @@ export class ArticlesService {
   }
 
   getArticle(id:String): Observable<Article>{
-    return this.http.get<Article>(`${this.url}/${id}`, httpOptions);
+    return this.http.get<Article>(`${this.url}${id}`, httpOptions);
   }
 
 }
